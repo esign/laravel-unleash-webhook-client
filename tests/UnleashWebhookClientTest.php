@@ -3,9 +3,9 @@
 
 use PHPUnit\Framework\Attributes\Test;
 
-namespace :vendor_namespace\Tests;
+namespace Esign\UnleashWebhookClient\Tests;
 
-final class :studly_package_nameTest extends TestCase
+final class UnleashWebhookClientTest extends TestCase
 {
     #[Test]
     public function test(): void
