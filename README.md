@@ -4,7 +4,7 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/esign/laravel-unleash-webhook-client.svg?style=flat-square)](https://packagist.org/packages/esign/laravel-unleash-webhook-client)
 ![GitHub Actions](https://github.com/esign/laravel-unleash-webhook-client/actions/workflows/main.yml/badge.svg)
 
-This package is a wrapper on top of [Spatie's Laravel Webhook Client package](https://github.com/spatie/laravel-webhook-client).
+This package builds on top of [Spatie's Laravel Webhook Client package](https://github.com/spatie/laravel-webhook-client) to provide handling of [Unleash](https://www.unleash.be) webhooks in Laravel applications.
 
 ## Installation
 
@@ -27,6 +27,8 @@ You can use its `getWebhookEntries` method to extract the relevant data from the
 ```php
 namespace App\Jobs;
 
+use App\Models\Redirect;
+use App\Models\Translation;
 use Esign\UnleashWebhookClient\Jobs\ProcessUnleashWebhookJob as BaseProcessUnleashWebhookJob;
 
 class ProcessUnleashWebhookJob extends BaseProcessUnleashWebhookJob
